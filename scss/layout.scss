@@ -1,0 +1,89 @@
+@import "vars";
+@import "mixins";
+// @붙이면 가져올수 있다. (import할때는 제목의 언더바를 붙이지 않는다)
+
+body {
+  font-family: "Roboto", "Noto Sans KR", "돋움";
+  color: #111;
+  font-size: 18px;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+  color: inherit;
+  font-family: inherit;
+}
+
+.container {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+#header {
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  h1 {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    img {
+      height: 40px;
+    }
+  }
+  nav {
+    font-size: 24px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    ul {
+      display: flex;
+      align-items: center;
+      li {
+        a {
+          padding: 0 30px;
+          //background-color: pink;
+        }
+      }
+    }
+  }
+  #util {
+    display: flex;
+    align-items: center;
+    input {
+      font-size: 24px;
+      width: 200px;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #333;
+    }
+    button {
+      cursor: pointer;
+      i {
+        font-size: 30px;
+      }
+      .fa-user {
+        margin-left: 20px;
+      }
+      .fa-magnifying-glass {
+        margin-left: 10px;
+      }
+    }
+  }
+}

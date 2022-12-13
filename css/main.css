@@ -1,0 +1,75 @@
+#main-visual {
+  background-image: url("../images/main/main.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  align-items: flex-end;
+  text-align: center;
+}
+#main-visual .container {
+  width: 1500px;
+  color: #fff;
+}
+#main-visual .container .title h3 {
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+#main-visual .container .title h2 {
+  font-size: 100px;
+  font-family: "Noto Serif KR";
+}
+#main-visual .container button {
+  margin: 120px auto;
+  padding: 20px 40px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+#main-visual .container button img {
+  width: 40px;
+  margin-left: 20px;
+  transition: all 0.25s ease;
+}
+#main-visual .container button:hover {
+  background-color: #0e6458;
+}
+#main-visual .container button:hover img {
+  transform: translateX(30%);
+}
+#main-visual .container ul {
+  font-family: "Noto Serif KR";
+  font-size: 21px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+#main-visual .container ul li {
+  position: relative;
+  padding: 0 100px;
+}
+#main-visual .container ul li:nth-child(1) {
+  padding-left: 0;
+}
+#main-visual .container ul li:nth-child(3) {
+  padding-right: 0;
+}
+#main-visual .container ul li:after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 1px;
+  height: 80%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+#main-visual .container ul li:nth-last-child(1):after {
+  display: none;
+}
+#main-visual .container ul li i {
+  margin-bottom: 30px;
+}
