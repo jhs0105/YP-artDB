@@ -79,3 +79,30 @@
     }
   }
 }
+
+#our {
+  margin: 100px 0;
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 150px 0;
+    h2 {
+      font-family: "Noto Serif KR";
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+  }
+  .our-slide {
+    ul {
+      width: 100%;
+      li {
+        width: 300px;
+        img {
+          width: 300px;
+        }
+      }
+    }
+  }
+}

@@ -43,10 +43,10 @@ button {
   align-items: center;
 }
 #header h1 img {
-  height: 40px;
+  height: 35px;
 }
 #header nav {
-  font-size: 24px;
+  font-size: 20px;
   height: 120px;
   display: flex;
   align-items: center;
