@@ -75,7 +75,10 @@
 }
 
 #our {
-  margin: 100px 0;
+  margin: 100px 0 200px;
+}
+#our .container {
+  width: 70%;
 }
 #our .title {
   display: flex;
@@ -89,6 +92,10 @@
   font-size: 50px;
   margin-bottom: 20px;
 }
+#our .title p {
+  font-size: 16px;
+  opacity: 0.8;
+}
 #our .our-slide ul {
   width: 100%;
 }
@@ -97,4 +104,111 @@
 }
 #our .our-slide ul li img {
   width: 300px;
+}
+#our .our-slide ul li h3 {
+  margin-top: 30px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.25;
+}
+#our .our-slide ul li span {
+  color: #055e52;
+  font-size: 15px;
+}
+#our .our-slide .pagination {
+  display: flex;
+  justify-content: center;
+}
+#our .our-slide .pagination .swiper-pagination-bullet {
+  width: 50px;
+  height: 3px;
+  border-radius: 0;
+  margin: 150px 0 0 0;
+}
+#our .our-slide .pagination .swiper-pagination-bullet-active {
+  background-color: #111;
+}
+
+#category {
+  padding: 150px 0;
+  background-color: #19464a;
+}
+#category .container {
+  width: 80vw;
+}
+#category .title {
+  color: #fff;
+}
+#category .title h3 {
+  font-size: 50px;
+  font-family: "Noto Serif KR";
+  line-height: 1.5;
+}
+#category .title p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+#category .parts {
+  padding-top: 50px;
+}
+#category .parts ul {
+  display: flex;
+  justify-content: end;
+  color: #fff;
+}
+#category .parts ul li {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+#category .parts ul li:nth-child(2), #category .parts ul li:nth-child(3), #category .parts ul li:nth-child(4), #category .parts ul li:nth-child(5) {
+  margin-left: -1px;
+}
+#category .parts ul li.on a {
+  width: 300px;
+  background-color: #fff;
+}
+#category .parts ul li.on h4 {
+  color: #111;
+  font-weight: 700;
+}
+#category .parts ul li.on p {
+  opacity: 1;
+}
+#category .parts ul li.on img {
+  filter: brightness(1) invert(0);
+}
+#category .parts ul li.on i {
+  opacity: 1;
+}
+#category .parts ul li a {
+  width: 215px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 30px;
+  box-sizing: border-box;
+  position: relative;
+}
+#category .parts ul li img {
+  height: 40px;
+  filter: brightness(0) invert(1);
+}
+#category .parts ul li h4 {
+  font-family: "Noto Serif KR";
+  font-size: 25px;
+  font-weight: 500;
+}
+#category .parts ul li p {
+  opacity: 0;
+  color: #333;
+  font-size: 15px;
+}
+#category .parts ul li i {
+  opacity: 0;
+  font-size: 20px;
+  position: absolute;
+  color: #333;
+  bottom: 40px;
+  right: 30px;
 }
