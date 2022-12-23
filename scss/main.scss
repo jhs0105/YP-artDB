@@ -225,3 +225,81 @@
     }
   }
 }
+
+#our-village {
+  padding: 150px 0;
+  background-image: url("../images/main/map-01.svg");
+  background-position: 100% 50%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  .container {
+    width: 80vw;
+  }
+  .title {
+    color: #111;
+    h3 {
+      font-size: 50px;
+      font-family: "Noto Serif KR";
+      line-height: 1.5;
+    }
+    p {
+      font-size: 16px;
+      margin: 20px 0;
+    }
+  }
+  .village {
+    ul {
+      width: 45%;
+      display: flex;
+      flex-wrap: wrap;
+      margin: 100px 0;
+      li {
+        color: #999;
+        display: flex;
+        justify-content: center;
+        width: calc(100% / 6 - 15px);
+        line-height: 1.5;
+        margin-right: 15px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+      }
+    }
+  }
+  .info {
+    width: 45%;
+    padding-bottom: 100px;
+    ul {
+      border-top: 2px solid #333;
+      li {
+        border-bottom: 1px solid #ccc;
+        a {
+          display: flex;
+          padding: 20px;
+          > span {
+            font-size: 15px;
+            margin-bottom: auto;
+            background-color: #111;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-right: 20px;
+          }
+          .contents {
+            h3 {
+              font-size: 20px;
+              font-weight: 700;
+              margin-bottom: 10px;
+            }
+            span {
+              display: block;
+              font-size: 17px;
+              color: #333;
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

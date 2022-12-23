@@ -212,3 +212,77 @@
   bottom: 40px;
   right: 30px;
 }
+
+#our-village {
+  padding: 150px 0;
+  background-image: url("../images/main/map-01.svg");
+  background-position: 100% 50%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
+#our-village .container {
+  width: 80vw;
+}
+#our-village .title {
+  color: #111;
+}
+#our-village .title h3 {
+  font-size: 50px;
+  font-family: "Noto Serif KR";
+  line-height: 1.5;
+}
+#our-village .title p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+#our-village .village ul {
+  width: 45%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 100px 0;
+}
+#our-village .village ul li {
+  color: #999;
+  display: flex;
+  justify-content: center;
+  width: calc(16.6666666667% - 15px);
+  line-height: 1.5;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+#our-village .info {
+  width: 45%;
+  padding-bottom: 100px;
+}
+#our-village .info ul {
+  border-top: 2px solid #333;
+}
+#our-village .info ul li {
+  border-bottom: 1px solid #ccc;
+}
+#our-village .info ul li a {
+  display: flex;
+  padding: 20px;
+}
+#our-village .info ul li a > span {
+  font-size: 15px;
+  margin-bottom: auto;
+  background-color: #111;
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+#our-village .info ul li a .contents h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+#our-village .info ul li a .contents span {
+  display: block;
+  font-size: 17px;
+  color: #333;
+  margin-bottom: 15px;
+}

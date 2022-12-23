@@ -64,7 +64,7 @@ button {
 }
 #header #util input {
   font-size: 24px;
-  width: 200px;
+  width: 120px;
   outline: none;
   border: none;
   border-bottom: 2px solid #333;
@@ -73,10 +73,10 @@ button {
   cursor: pointer;
 }
 #header #util button i {
-  font-size: 30px;
+  font-size: 25px;
 }
 #header #util button .fa-user {
-  margin-left: 20px;
+  margin-left: 15px;
 }
 #header #util button .fa-magnifying-glass {
   margin-left: 10px;

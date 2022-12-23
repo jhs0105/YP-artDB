@@ -198,8 +198,92 @@
         </div>
       </div>
     </section>
+    <section id="our-village">
+      <div class="container">
+        <div class="title">
+          <h3>우리동네 예술공간</h3>
+          <p>내가 잘 알지 못했던 곳에 이런 예술공간이 있습니다. 양평의 예술공간을 확인해보세요.</p>
+        </div>
+        <div class="village">
+          <ul>
+            <li>#강상면</li>
+            <li>#강하면</li>
+            <li>#개군면</li>
+            <li>#단월면</li>
+            <li>#서종면</li>
+            <li>#양동면</li>
+            <li>#양서면</li>
+            <li>#양평읍</li>
+            <li>#옥천면</li>
+            <li>#용문면</li>
+            <li>#지평면</li>
+            <li>#청운면</li>
+          </ul>
+        </div>
+        <div class="info">
+          <ul>
+            <li>
+              <a href="">
+                <span>민간</span>
+                <div class="contents">
+                  <h3>오거스트 하우스</h3>
+                  <span>전시실, 아트샵, 다목적실</span>
+                  <p>경기도 양평군 강상면 강남로 1244</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span>민간</span>
+                <div class="contents">
+                  <h3>책보고가게</h3>
+                  <span>서점, 카페</span>
+                  <p>경기도 양평군 강상면 방아다리길 14-20</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <span>민간</span>
+                <div class="contents">
+                  <h3>핸드릭스스튜디오 카페</h3>
+                  <span>소무대, 카페, 스튜디오, 합주실</span>
+                  <p>경기도 양평군 강상면 강남로 648</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </body>
   <script>
+    const categoryList = document.querySelectorAll("#category .parts ul li");
+    function siblings(dom) {
+      dom.parentElement.children.filter((item) => {
+        return item != dom;
+      });
+    }
+
+    for (let i = 0; i < categoryList.length; i++) {
+      categoryList[i].addEventListener("mouseenter", function (e) {
+        e.preventDefault();
+        categoryList[i].classList.add("on");
+        const restList = [...categoryList[i].parentElement.children];
+        const result = restList.filter((item, idx) => {
+          return item !== categoryList[i];
+        });
+        result.map((item, idx) => {
+          item.classList.remove("on");
+        });
+      });
+      categoryList[i].addEventListener("mouseleave", function (e) {
+        e.preventDefault();
+        categoryList[i].classList.remove("on");
+        categoryList[0].classList.add("on");
+      });
+    }
+
     const swiper = new Swiper("#our .our-slide", {
       loop: true,
       slidesPerView: "auto",
@@ -225,5 +309,17 @@
         },
       },
     });
+
+    const mapList = document.querySelectorAll("#our-village .village ul li");
+    const bg = document.querySelector("#our-village");
+
+    for (let i = 0; i < mapList.length; i++) {
+      mapList[i].addEventListener("click", function () {
+        bg.style.background = `url(../images/main/map-0${i + 1}.svg)`;
+        bg.style.backgroundPosition = "100% 50%";
+        bg.style.backgroundSize = "50%";
+        bg.style.backgroundRepeat = "no-repeat";
+      });
+    }
   </script>
 </html>
