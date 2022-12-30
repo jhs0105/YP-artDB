@@ -13,19 +13,19 @@
   color: #fff;
 }
 #main-visual .container .title h3 {
-  font-size: 25px;
+  font-size: 24px;
   margin-bottom: 30px;
 }
 #main-visual .container .title h2 {
-  font-size: 100px;
+  font-size: 90px;
   font-family: "Noto Serif KR";
 }
 #main-visual .container button {
-  margin: 120px auto;
-  padding: 20px 40px;
+  margin: 100px auto;
+  padding: 18px 40px;
   border: 1px solid #fff;
   border-radius: 100px;
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   align-items: center;
 }
@@ -42,7 +42,7 @@
 }
 #main-visual .container ul {
   font-family: "Noto Serif KR";
-  font-size: 21px;
+  font-size: 20px;
   line-height: 1.5;
   display: flex;
   justify-content: center;

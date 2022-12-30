@@ -71,28 +71,51 @@
     <section id="main-visual">
       <div class="container">
         <div class="title">
-          <h3>양평 예술인들의 작품을 감상하고 홍보하는 공간</h3>
-          <h2>양평아트DB</h2>
+          <h3 data-aos="fade-up" data-aos-duration="1000">
+            양평 예술인들의 작품을 감상하고 홍보하는 공간
+          </h3>
+          <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+            양평아트DB
+          </h2>
         </div>
-        <button>
+        <button
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="400"
+        >
           자세히보기 <img src="../images/main/arrow_white.svg" alt="" />
         </button>
         <ul>
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-offset="-500"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
             <i class="fa-solid fa-quote-left"></i>
             <p>
               양평에서 작업한 나의 작품을 <br />
               직접 알리고 싶어
             </p>
           </li>
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-offset="-500"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
             <i class="fa-solid fa-quote-left"></i>
             <p>
               이번 프로젝트에 함께 할 작가를 <br />
               찾고 싶은데 어디서 찾을 수 있을까?
             </p>
           </li>
-          <li>
+          <li
+            data-aos="fade-up"
+            data-aos-offset="-500"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+          >
             <i class="fa-solid fa-quote-left"></i>
             <p>
               서울은 전시공간이 너무 비싼데 <br />
@@ -399,12 +422,125 @@
     </footer>
   </body>
   <script>
+    AOS.init();
+
+    const ourTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#our",
+        toggleActions: "play complete resume reset",
+      },
+    });
+    ourTL
+      .from("#our .title h2", { opacity: 0, y: 100, duration: 0.8 })
+      .from("#our .title p", { opacity: 0, y: 100, duration: 0.8 }, "-=0.5");
+
+    const categoryTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#category",
+        toggleActions: "play complete resume reset",
+      },
+    });
+    categoryTL
+      .from("#category .title h3", { opacity: 0, y: 100, duration: 1 })
+      .from("#category .title p", { opacity: 0, y: 100, duration: 1 }, "-=0.5")
+      .from(
+        "#category .parts li:nth-child(1)",
+        { opacity: 0, y: 50, duration: 0.5 },
+        "-=0.8"
+      )
+      .from(
+        "#category .parts li:nth-child(2)",
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.5,
+        },
+        "-=0.4"
+      )
+      .from(
+        "#category .parts li:nth-child(3)",
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.5,
+        },
+        "-=0.4"
+      )
+      .from(
+        "#category .parts li:nth-child(4)",
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.5,
+        },
+        "-=0.4"
+      )
+      .from(
+        "#category .parts li:nth-child(5)",
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.5,
+        },
+        "-=0.4"
+      );
+
+    const ourVillageTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#our-village",
+        toggleActions: "play complete resume reset",
+      },
+    });
+
+    ourVillageTL
+      .from("#our-village .title h3", { opacity: 0, y: 100, duration: 1 })
+      .from(
+        "#our-village .title p",
+        { opacity: 0, y: 100, duration: 1 },
+        "-=0.5"
+      )
+      .from(
+        "#our-village .village",
+        { opacity: 0, y: 100, duration: 1 },
+        "-=0.5"
+      )
+      .from("#our-village .info", { opacity: 0, y: 100, duration: 1 }, "-=0.5");
+
+    const artRegisterTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#art-register",
+        toggleActions: "play complete resume reset",
+      },
+    });
+    artRegisterTL
+      .from("#art-register .title h3", { opacity: 0, y: 100, duration: 1 })
+      .from(
+        "#art-register .title p",
+        { opacity: 0, y: 100, duration: 1 },
+        "-=0.5"
+      )
+      .from(
+        "#art-register .register-place li:nth-child(1)",
+        { opacity: 0, y: 100, duration: 0.8 },
+        "-=0.5"
+      )
+      .from(
+        "#art-register .register-place li:nth-child(2)",
+        { opacity: 0, y: 100, duration: 0.8 },
+        "-=0.5"
+      )
+      .from(
+        "#art-register .register-place li:nth-child(3)",
+        { opacity: 0, y: 100, duration: 0.8 },
+        "-=0.5"
+      );
+
     const categoryList = document.querySelectorAll("#category .parts ul li");
-    function siblings(dom) {
-      dom.parentElement.children.filter((item) => {
-        return item != dom;
-      });
-    }
+    // function siblings(dom) {
+    //   dom.parentElement.children.filter((item) => {
+    //     return item != dom;
+    //   });
+    // }
 
     for (let i = 0; i < categoryList.length; i++) {
       categoryList[i].addEventListener("mouseenter", function (e) {
@@ -414,6 +550,7 @@
         const result = restList.filter((item, idx) => {
           return item !== categoryList[i];
         });
+        console.log(result);
         result.map((item, idx) => {
           item.classList.remove("on");
         });
