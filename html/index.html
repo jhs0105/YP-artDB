@@ -604,17 +604,18 @@
     const ul = document.querySelector("#our-village .info ul");
     for (let i = 0; i < mapList.length; i++) {
       mapList[i].addEventListener("click", function () {
-        bg.style.background = `url(../images/main/map-0${i + 1}.svg)`;
-        bg.style.backgroundPosition = "100% 50%";
-        bg.style.backgroundSize = "50%";
-        bg.style.backgroundRepeat = "no-repeat";
-        fetch("/data/info.json")
-          .then((response) => response.json())
-          .then((data) => {
-            const infoList = data.info[i];
-            let infoLi = "";
-            infoList.forEach((item, idx) => {
-              infoLi += `<li>
+        imagesLoaded("#our-village", { background: true }, function () {
+          bg.style.background = `url(../images/main/map-0${i + 1}.svg)`;
+          bg.style.backgroundPosition = "100% 50%";
+          bg.style.backgroundSize = "50%";
+          bg.style.backgroundRepeat = "no-repeat";
+          fetch("/data/info.json")
+            .then((response) => response.json())
+            .then((data) => {
+              const infoList = data.info[i];
+              let infoLi = "";
+              infoList.forEach((item, idx) => {
+                infoLi += `<li>
               <a href="">
                 <span>${item.part}</span>
                 <div class="contents">
@@ -626,9 +627,10 @@
                 </div>
               </a>
             </li>`;
+              });
+              ul.innerHTML = infoLi;
             });
-            ul.innerHTML = infoLi;
-          });
+        });
       });
     }
 
@@ -647,7 +649,11 @@
 
     for (let i = 0; i < register.length; i++) {
       register[i].addEventListener("mouseover", function () {
-        gsap.to(register[i], { y: -80, duration: 0.2, ease: "power0" });
+        gsap.to(register[i].children, {
+          y: -80,
+          duration: 0.2,
+          ease: "power0",
+        });
         gsap.to(`.register-place ul li:nth-child(${i + 1}) span`, {
           backgroundColor: "#0e6458",
           color: "#fff",
@@ -656,7 +662,7 @@
         });
       });
       register[i].addEventListener("mouseout", function () {
-        gsap.to(register[i], { y: 0, duration: 0.2, ease: "power0" });
+        gsap.to(register[i].children, { y: 0, duration: 0.2, ease: "power0" });
         gsap.to(`.register-place ul li:nth-child(${i + 1}) span`, {
           backgroundColor: "#fff",
           color: "#111",
